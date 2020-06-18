@@ -79,8 +79,8 @@ public class AchiveWindow {
 	@SuppressWarnings("unchecked")
 	private void initialize() {
 //		============App mode================
-		mainFrame = new JFrame();
-		mainFrame.setResizable(false);
+//		mainFrame = new JFrame();
+//		mainFrame.setResizable(false);
 		mainFrame.setSize(new Dimension(865, 640));
 		mainFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(FirstPlayerSettingWindow.class.getResource("/main/IMG/startWindowBackground.png")));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -629,7 +629,7 @@ public class GeneralStoreWindow {
 		animalProductPanel.add(pigButton);
 
 		cowButton = new JButton();
-		cowButton.setToolTipText(store.getAnimalToolTip("Sheep", store.getDailyGeneratedMoney("Cow")));
+		cowButton.setToolTipText(store.getAnimalToolTip("Cow", store.getDailyGeneratedMoney("Cow")));
 		cowButton.setIcon(new ImageIcon(new ImageIcon(GeneralStoreWindow.class.getResource("/main/IMG/cow.png")).getImage().getScaledInstance(145, 98, 20)));
 		cowButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

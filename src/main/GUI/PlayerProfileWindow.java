@@ -80,7 +80,7 @@ public class PlayerProfileWindow {
 		
 		
 ////		============App mode================
-		mainFrame = new JFrame();
+//		mainFrame = new JFrame();
 		mainFrame.setSize(new Dimension(865, 640));
 		mainFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(FirstPlayerSettingWindow.class.getResource("/main/IMG/startWindowBackground.png")));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

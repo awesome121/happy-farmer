@@ -14,6 +14,10 @@ Preferred Java SE "12.0.1" <br/>but you can also use University of Canterbury la
 Install Eclipse IDE https://www.eclipse.org
 
 #Getting Started
+###Runnable jar file
+Please make sure you have installed Java before running jar file
+To run, simply use "java -jar .../HappyFarmer.jar" in terminal
+
 ###_Open project_
 Eclipse -> File -> Open Projects from File System.. -> Import source(Root directory) -> finish
 
