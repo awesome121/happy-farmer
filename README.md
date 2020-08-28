@@ -1,8 +1,8 @@
 # Happy Farmer
-Happy Farmer is a SENG201 Project in university of Canterbury. 
+Happy Farmer is a SENG201 Project at university of Canterbury. 
 
-It's a farm simulator which allows you to play a simple farm game, 
-please refer "Game Introduction" for more information.
+It's a farm simulator which allows you to play a simple farm game!
+Please see "Game Introduction" below for more information.
 
 
 # Prerequisites
@@ -14,15 +14,15 @@ please refer "Game Introduction" for more information.
 
 
 # Getting Started
-### Runnable jar file
+### _Runnable jar file_
 Please make sure you have installed Java before running jar file
-To run, simply use "java -jar .../HappyFarmer.jar" in terminal
+To run it, simply use command line "java -jar .../HappyFarmer.jar"
 
 ### _Open project_
 Eclipse -> File -> Open Projects from File System.. -> Import source(Root directory) -> finish
 
 You should be able to see "src", "JUnit 5" and "JRE System Library".
-### Run App.java
+### _Run App.java_
 Using Eclipse, Project Explorer: src -> main -> App.java
 
 # Game Introduction
@@ -36,20 +36,22 @@ The game can be achived and reloaded.<br/>
 * There will be some random events happening namely broken fence, drought and county fair encouraging and discouraging the player throughout the whole game when switching to the next day. Even though animals are relatively expensive, broken fence is very likely to happen due to poor management.<br/><br/>
 
 # Enable GUI Design
-**Please read this section care fully so that you can manage to open our design mode**
+**Please read this section carefully to open our design mode**
 
-Install Window Builder:
+### _Install Window Builder_:
 <br/>Eclipse -> Help -> Eclipse Marketplace -> Window Builder 1.9.3
 
 
-Setup Design:
+### _Setup Design_:
 <br/>Because all the classes under main.GUI package are using one shared Frame, Window builder is unable to switch design mode(except StartWindow.java).
 <br/><br/>To resolve this, please insert one single line "mainFrame = new JFrame()" under line "======app mode====="<br/> also comment out all the other constructors except the first one.	
-	
+
+# Example
+
 
 # Reference
-All the pictures from web included in the project are for demonstration purpose only.<br/>
-Full reference list please see ExamplePictures.txt, their designers reserve all rights.
+All the pictures from web included in the project are only for demonstration purposes.<br/>
+Full reference list please see ExamplePictures.txt, their original authers reserve all rights.
 
 # Author
 Changxing Gong<br/>
