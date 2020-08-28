@@ -8,7 +8,7 @@ For more information about our development process, please email jimmy75792@gmai
 
 # Prerequisites
 
-* Preferred Java SE "12.0.1" <br/>but you can also use University of Canterbury lab machine.
+* Prefer Java SE "12.0.1" <br/>you can also use University of Canterbury lab machine.
    To download Java, please see: https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html
 
 * Install Eclipse IDE https://www.eclipse.org
@@ -16,13 +16,12 @@ For more information about our development process, please email jimmy75792@gmai
 
 # Getting Started
 ### _Runnable jar file_
-Please make sure you have installed Java before running jar file
-To run it, simply use command line "java -jar .../HappyFarmer.jar"
+Please make sure you have installed Java before running jar file.
+To run it, simply use command line "java -jar .../HappyFarmer.jar".
 
 ### _Open project_
 Eclipse -> File -> Open Projects from File System.. -> Import source(Root directory) -> finish
 
-You should be able to see "src", "JUnit 5" and "JRE System Library".
 ### _Run App.java_
 Using Eclipse, Project Explorer: src -> main -> App.java
 
