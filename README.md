@@ -26,14 +26,14 @@ You should be able to see "src", "JUnit 5" and "JRE System Library".
 Using Eclipse, Project Explorer: src -> main -> App.java
 
 # Game Introduction
-The Goal of this game is earning as much money as you can given limited time! 
+The Goal of this game is earning as much money as you can given limited time! <br/>
 A player has to find a balance point between his money and time. In the end, there would be a weighted final score considering all of the player's property.
-The game can be achived and reloaded.
-At the beginning, the player can choose days between 5-10, inclusive. The more starting days the player chooses, the less staring money the player has. Even though the player chooses 5 days at first, there is a "Time Machine" in general store, which allows the player having a chance to increase left time, but it's very expensive.
-4 types of farm: Standard, crop, animal, and fish farm. Each of them has its own special advantage and disadvantage, but all of them allows the player to grow crops and feed animals.
-6 species of crops and 3 species of animals are provided in general store. The player will only have starting money at the beginning.
-6 types of actions: Tend farm land, feed animals, harvest crops, tend crops by water or by fertilizer, play with animals and fishing(Fishing farm only). There are only 2 actions allowed to perform per day.
-There will be random events happening which are broken fence, drought and county fair encouraging and discouraging the player throughout the whole game when switching to the next day. Even though animals are relatively expensive, broken fence is very likely to happen due to poor management.
+The game can be achived and reloaded.<br/>
+At the beginning, the player can choose days between 5-10, inclusive. The more starting days the player chooses, the less staring money the player has. Even though the player chooses 5 days at first, there is a "Time Machine" in general store, which allows the player having a chance to increase left time, but it's very expensive.<br/>
+4 types of farm: Standard, crop, animal, and fish farm. Each of them has its own special advantage and disadvantage, but all of them allows the player to grow crops and feed animals.<br/>
+6 species of crops and 3 species of animals are provided in general store. The player will only have starting money at the beginning.<br/>
+6 types of actions: Tend farm land, feed animals, harvest crops, tend crops by water or by fertilizer, play with animals and fishing(Fishing farm only). There are only 2 actions allowed to perform per day.<br/>
+There will be random events happening which are broken fence, drought and county fair encouraging and discouraging the player throughout the whole game when switching to the next day. Even though animals are relatively expensive, broken fence is very likely to happen due to poor management.<br/><br/>
 
 # Enable GUI Design
 **Please read this section care fully so that you can manage to open our design mode**
@@ -52,7 +52,7 @@ All the pictures from web included in the project are for demonstration purpose 
 Full reference list please see ExamplePictures.txt, their designers reserve all rights.
 
 # Author
-Changxing Gong
+Changxing Gong<br/>
 Rayhan Aristia
 
 # Date
