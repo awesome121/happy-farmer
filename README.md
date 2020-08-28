@@ -2,7 +2,7 @@
 Happy Farmer is a SENG201 Project at University of Canterbury. 
 
 It's a farm simulator which allows you to play a simple farm game!
-Please see "Game Introduction" below for more information.<br/>
+Please see "Game Introduction" below for more information.<br/><br/>
 For more information about our development process, please email jimmy75792@gmail.com to view our Gitlab repository.
 
 
