@@ -2,7 +2,7 @@
 Happy Farmer is a SENG201 Project at university of Canterbury. 
 
 It's a farm simulator which allows you to play a simple farm game!
-Please see "Game Introduction" below for more information.
+Please see "Game Introduction" below for more information.<br/>
 For more information about our development process, please email jimmy75792@gmail.com to view our Gitlab
 
 
@@ -48,7 +48,7 @@ The game can be achived and reloaded.<br/>
 <br/><br/>To resolve this, please insert one single line "mainFrame = new JFrame()" under line "======app mode====="<br/> also comment out all the other constructors except the first one.	
 
 # Example
-
+Please see directory "example"
 
 # Reference
 All the pictures from web included in the project are only for demonstration purposes.<br/>
