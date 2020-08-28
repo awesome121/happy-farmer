@@ -58,5 +58,5 @@ Changxing Gong<br/>
 Rayhan Aristia
 
 # Date
-Project start Time: 17/04/20<br/>
-Project finish Time: 24/05/2020
+Project start time: 17/04/2020<br/>
+Project finish time: 24/05/2020
