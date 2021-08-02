@@ -5,6 +5,11 @@ It's a farm simulator which allows you to play a simple farm game!
 Please see "Game Introduction" below for more information.<br/><br/>
 For more information about our development process, please email jimmy75792@gmail.com to view our Gitlab repository.
 
+# Demo
+<img src="./example/demo1" height=400 width=400>
+<img src="./example/demo2" height=400 width=400>
+<img src="./example/demo3" height=400 width=400>
+<img src="./example/demo4" height=400 width=400>
 
 # Prerequisites
 
