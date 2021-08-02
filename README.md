@@ -13,7 +13,7 @@ Please see "Game Introduction" below for more information.<br/><br/>
 
 # Prerequisites
 
-* Prefer Java SE "12.0.1" <br/>you can also use University of Canterbury lab machine.
+* Prefer Java SE "12.0.1" <br/>you can also use our lab machine.
    To download Java, please see: https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html
 
 * Install Eclipse IDE https://www.eclipse.org
