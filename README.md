@@ -6,10 +6,10 @@ Please see "Game Introduction" below for more information.<br/><br/>
 For more information about our development process, please email jimmy75792@gmail.com to view our Gitlab repository.
 
 # Demo
-<img src="./example/demo1.png" height=400 width=400>
-<img src="./example/demo2.png" height=400 width=400>
-<img src="./example/demo3.png" height=400 width=400>
-<img src="./example/demo4.png" height=400 width=400>
+<img src="./example/demo1.png" height=450 width=600>
+<img src="./example/demo2.png" height=450 width=600>
+<img src="./example/demo3.png" height=450 width=600>
+<img src="./example/demo4.png" height=450 width=600>
 
 # Prerequisites
 
