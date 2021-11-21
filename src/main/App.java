@@ -146,6 +146,18 @@ public class App {
 		launchFirstPlayerSettingWindow();
 	}
 	
+	public void achiveWindowToStartWindow() {
+		achiveWindow.closeWindow();
+		achiveWindow = null;
+		launchStartWindow();
+	}
+	
+	public void achiveWindowToPlayerProfileWindow() {
+		achiveWindow.closeWindow();
+		achiveWindow = null;
+		launchPlayerProfileWindow();
+		}
+	
 	
 	
 	public void startWindowToFirstPlayerSettingWindow() {

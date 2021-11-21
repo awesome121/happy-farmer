@@ -71,6 +71,7 @@ public class FirstPlayerSettingWindow {
 	
 	private void initialize() {
 
+
 		
 //	============app mode below============
 		mainFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(FirstPlayerSettingWindow.class.getResource("/main/IMG/startWindowBackground.png")));

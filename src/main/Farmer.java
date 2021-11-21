@@ -21,6 +21,7 @@ public class Farmer implements Serializable{
 	private int farmerAge;
 	private Farm farm;
 	private Date startDate;
+	private Date lastActiveTime;
 	
 	private int currentMoney;
 	private int actions = 2;
@@ -312,6 +313,14 @@ public class Farmer implements Serializable{
 	
 	public void setStartDate() {
 		startDate = new Date();
+	}
+	
+	public void setLastActiveTime(Date date) {
+		lastActiveTime = date;
+	}
+	
+	public Date getLastActiveTime() {
+		return this.lastActiveTime;
 	}
 	
 	public void resetAnimalsList(ArrayList<Animal> list) {

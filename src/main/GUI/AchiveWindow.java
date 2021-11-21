@@ -8,6 +8,7 @@ import main.Farmer;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -29,6 +30,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 
@@ -43,10 +45,12 @@ public class AchiveWindow {
 	private JList fileList;
 	private JScrollPane fileScrollPane;
 	private JTextArea fileDescriptionTextArea;
+	private JLabel promptLabel;
 	private JButton loadAchiveButton;
 	private JButton newGameButton;
 	private JButton saveButton;
 	private JButton soundButton;
+	private JButton backButton;
 	
 //	private ArrayList<AchiveObject> achiveObjects = new ArrayList<AchiveObject>();
 	private ArrayList<Farmer> achiveObjects = new ArrayList<Farmer>();
@@ -78,6 +82,8 @@ public class AchiveWindow {
 	 */
 	@SuppressWarnings("unchecked")
 	private void initialize() {
+		
+
 //		============App mode================
 //		mainFrame = new JFrame();
 //		mainFrame.setResizable(false);
@@ -97,16 +103,22 @@ public class AchiveWindow {
 		mainFrame.getContentPane().add(fileDescriptionTextArea);
 		
 		
+		promptLabel = new JLabel();
+		promptLabel.setFont(new Font("Arial", Font.BOLD, 22));
+		promptLabel.setBorder(null);
+		promptLabel.setBackground(Color.WHITE);
+		promptLabel.setBounds(175, 14, 500, 53);
+		mainFrame.getContentPane().add(promptLabel);
+
+		
 		fileList = new JList();
 		ArrayList<String> temp = new ArrayList<String>();
-		read_achive();
+		readAchive();
 		if (achiveObjects.size()==0)
-			temp.add("No Available Achive");
+			promptLabel.setText("No Available Achive");
 		else {
-//			for(AchiveObject achive: achiveObjects) {
 			for(Farmer achive: achiveObjects) {
-//				temp.add(achive.getFarmerName());
-				temp.add(achive.getName());
+				temp.add(achive.getName() + "  " + achive.getLastActiveTime().toString());
 			}
 		}
 		fileList.setModel(new AbstractListModel() {
@@ -143,7 +155,10 @@ public class AchiveWindow {
 		loadAchiveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int index = fileList.getSelectedIndex();
-				app.load_game(achiveObjects.get(index));
+				if (index > -1)
+					app.load_game(achiveObjects.get(index));
+				else
+					promptLabel.setText("Select an archive to load");
 			}
 		});
 		loadAchiveButton.setBounds(630, 508, 155, 47);
@@ -151,12 +166,14 @@ public class AchiveWindow {
 		
 		
 		
+		
+		
 		saveButton = new JButton("Save");
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				achiveObjects.add(new AchiveObject(farmer));
+				farmer.setLastActiveTime(new Date());
 				achiveObjects.add(farmer);
-				store_achive();
+				storeAchive();
 				app.refreshAchiveWindow();
 			}
 		});
@@ -164,7 +181,18 @@ public class AchiveWindow {
 		saveButton.setVisible(false);
 		mainFrame.getContentPane().add(saveButton);
 		
-		
+		backButton = new JButton("Back");
+		backButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (app.isGameStarted())
+					app.achiveWindowToPlayerProfileWindow();
+				else
+					app.achiveWindowToStartWindow();
+			}
+		});
+		backButton.setBounds(33, 508, 155, 47);
+		backButton.setVisible(true);
+		mainFrame.getContentPane().add(backButton);
 		
 		soundButton = new JButton("sound");
 		soundButton.setBounds(757, 0, 109, 67);
@@ -206,16 +234,19 @@ public class AchiveWindow {
 		
 	}
 
-	public void read_achive(){
+	public void readAchive(){
 		try {
 			fileIn = new FileInputStream("Achive.ser");
-			in = new ObjectInputStream(fileIn);
-			int numFarmer = (int) in.readObject();
-			for(int i=1; i <= numFarmer; i++) {
-//				AchiveObject achive = (AchiveObject) in.readObject();
-				Farmer achive = (Farmer) in.readObject();
-				achiveObjects.add(achive);
-			}
+			try {
+				in = new ObjectInputStream(fileIn);
+				int numFarmer = (int) in.readObject();
+				for(int i=1; i <= numFarmer; i++) {
+					Farmer achive = (Farmer) in.readObject();
+					achiveObjects.add(achive);
+				}
+			} catch (java.io.EOFException e) {
+				// File is empty
+			} 
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -231,14 +262,14 @@ public class AchiveWindow {
 		} 
 	}
 	
-	public void store_achive() {
+	public void storeAchive() {
 		try {
 			fileOut = new FileOutputStream("Achive.ser");
 			out = new ObjectOutputStream(fileOut);
 			out.reset();
 			out.writeObject(achiveObjects.size());
-//			for(AchiveObject achive : achiveObjects) {
 			for(Farmer achive : achiveObjects) {
+				
 				out.writeObject(achive);
 			}
 			out.close();
